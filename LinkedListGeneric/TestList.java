@@ -17,15 +17,15 @@ public class TestList {
 		L3.append(new Student("Ahsan", 20));
 		L3.append(new Student("Faiz", 14));
 
-		for (Node n = L1.getCurr(); n != null; n = L1.getCurr()) {
+		for (Node<Integer> n = L1.getCurr(); n != null; n = L1.getCurr()) {
 			System.out.println(n);
 		}
 	
-		for(Node n = L2.getCurr(); n != null; n = L2.getCurr()) {
+		for(Node<String> n = L2.getCurr(); n != null; n = L2.getCurr()) {
 			System.out.println(n);
 		}
 
-		for(Node n = L3.getCurr(); n != null; n = L3.getCurr()) {
+		for(Node<Student> n = L3.getCurr(); n != null; n = L3.getCurr()) {
 			System.out.println(n);
 		}
 	}
