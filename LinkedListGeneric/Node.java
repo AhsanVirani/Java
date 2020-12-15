@@ -2,8 +2,8 @@
 public class Node<T> {
 
 	private T data;
-	private Node next;
-	private Node prev;
+	private Node<T> next;
+	private Node<T> prev;
 
 	/**
 	<Constructor Node>
@@ -14,14 +14,14 @@ public class Node<T> {
 		this.prev = null;
 	}
 
-	public Node(T data, Node next) {
+	public Node(T data, Node<T> next) {
 		this.data = data;
 		//Node node = new Node(data);
 		this.next = next;
 		//this.prev = null;
 	}
 
-	public Node(T data, Node next, Node prev) {
+	public Node(T data, Node<T> next, Node<T> prev) {
 		this.data = data;
 		this.next = next;
 		this.prev = prev;
@@ -35,12 +35,12 @@ public class Node<T> {
 	}
 
 	/** Gets the next node**/
-	public Node getNext() {
+	public Node<T> getNext() {
 		return this.next;
 	}
 
 	/** Gets the previous node**/
-	public Node getPrev() {
+	public Node<T> getPrev() {
 		return this.prev;
 	}
 
@@ -52,12 +52,12 @@ public class Node<T> {
 	}
 
 	/** Sets the next node**/
-	public void setNext(Node next) {
+	public void setNext(Node<T> next) {
 		this.next = next;
 	}
 
 	/** Sets the previous node**/
-	public void setPrev(Node prev) {
+	public void setPrev(Node<T> prev) {
 		this.prev = prev;
 	}
 

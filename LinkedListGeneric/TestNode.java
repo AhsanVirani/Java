@@ -1,7 +1,8 @@
 
-public class Main {
+public class TestNode {
 
 	public static void main(String[] args) {
+
 		Node<Integer> b = new Node<Integer>(10);
 
 		//Node b = new Node(10);
