@@ -1,6 +1,9 @@
 package LinkedListGeneric;
 
-public class List<T> {
+import java.util.Iterator;
+import java.util.ListIterator;
+
+public class List<T> implements Iterable<T> {
 
 	private Node<T>	head;
 	private Node<T>	tail;
@@ -72,6 +75,40 @@ public class List<T> {
 	public void resetCurr() {
 		this.pos = 0;
 		this.curr = this.head;
+	}
+
+	@Override
+	public Iterator<T> iterator() {
+		return new ListIterator<T>(this.head, this.size);
+	}
+
+	public static class ListIterator<T> implements Iterator<T> {
+		Node<T> containedCurr;
+		int containedSize;
+		int pos;
+
+		public ListIterator(Node<T> head, int size) {
+			this.containedCurr = head;
+			this.containedSize = size;
+			this.pos = 0;
+		}
+
+		@Override
+		public boolean hasNext() {
+			if(this.pos >= this.containedSize) return false;
+			return true;
+		}
+
+		@Override
+		public T next() {
+			if(hasNext()) {
+				Node<T> temp = this.containedCurr;
+				this.containedCurr = this.containedCurr.getNext();
+				this.pos += 1;
+				return temp.getData();
+			}
+			return null;
+		}
 	}
 
 }
