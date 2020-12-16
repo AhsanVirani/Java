@@ -1,3 +1,5 @@
+package LinkedListGeneric;
+
 /**
 access_modifier = {
 	public,
@@ -38,6 +40,11 @@ public class Student {
 
 	public String getName() {
 		return this.name;
+	}
+
+	@Override
+	public String toString() {
+		return "Name: " + this.name.toString() + "\t Age: " + this.age;
 	}
 
 /**

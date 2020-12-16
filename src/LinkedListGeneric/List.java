@@ -1,3 +1,5 @@
+package LinkedListGeneric;
+
 public class List<T> {
 
 	private Node<T>	head;

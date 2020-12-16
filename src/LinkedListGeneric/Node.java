@@ -1,3 +1,4 @@
+package LinkedListGeneric;
 
 public class Node<T> {
 

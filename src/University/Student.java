@@ -1,3 +1,5 @@
+package University;
+
 /**
 access_modifier = {
 	public,
@@ -26,31 +28,25 @@ access_modifier = {
 **/
 
 
-public class Student {
+public class Student extends Person {
 
-	private String	name;
-	private int	age;
+	private int	year;
 
-	public Student(String name, int age) {
-		this.name	= name;
-		this.age	= age;
+	public Student(String name, int age, String contactDetail, int year) {
+		super(name, age, contactDetail);
+		this.year	= year;
 	}
-
-	public String getName() {
-		return this.name;
-	}
-
-	@Override
-	public String toString() {
-		return "Name: " + this.name.toString() + "\t Age: " + this.age;
-	}
-
 /**
 	public static void main(String[] args) {
 		Student ahsan = new Student("Ahsan", 22);
 		System.out.println(ahsan.getName());
 	}
-**/
+*
+ * @return*/
+	public int getYear() { return this.year; }
+
+	@Override
+	public String toString() { return super.toString() + " Year: " + getYear(); }
 }
 
 
