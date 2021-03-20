@@ -1,6 +1,6 @@
 package University;
 
-public abstract class Person implements PersonMethods {
+public class Person implements PersonMethods {
 
     private String	name;
     private int	age;
